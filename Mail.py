@@ -39,7 +39,7 @@ class Email(Resource):
 			server.login(gmail_user, gmail_password)
 			server.sendmail(from1, to, email_text)
 			server.close()
-			conn = boto.ec2.connect_to_region("ap-south-1",aws_access_key_id='AKIAI7IELWDQU3EYCUPQ',aws_secret_access_key='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')	
+			//Connect to AWS
 			print conn
 			conn.run_instances('ami-ce3f4fa1',instance_type='t2.micro',key_name='test',security_groups=['launch-wizard-1'])
 			print 'Email sent!'
